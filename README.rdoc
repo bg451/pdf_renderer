@@ -1,3 +1,11 @@
-= PdfRenderer
-
-This project rocks and uses MIT-LICENSE.
+= PDF renderer
+Renders a pdf
+== Usage
+You need to have a view called view_name.pdf.erb
+    class HomeController < Application Controller
+      def index
+        respond_to do |format|
+          format.pdf{render pdf: 'contents'}
+        end
+      end
+    end
